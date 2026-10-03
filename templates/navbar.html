@@ -1,63 +1,130 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<header class="amazon-navbar">
 
-</head>
-
-<body>
-    <header>
-
+    <!-- Amazon Logo -->
+    <div class="nav-logo">
         <img src="{% static 'images/amazon_logo.png' %}" alt="Amazon Logo">
+    </div>
 
+    <!-- Location -->
+    <div class="nav-location">
+        <i class="fa-solid fa-location-dot"></i>
 
-        <div class="location_box">
-            <i class="fa-solid fa-location-dot"></i>
-            <div class="text_box">
-                <p class="text_manali">Delivering to manali 140306</p>
-                <p class="text_update">Update Location</p>
-            </div>
+        <div class="location-text">
+            <span>Delivering to Manali 140306</span>
+            <strong>Update Location</strong>
         </div>
+    </div>
+
+    <!-- Search -->
+    <div class="nav-search">
+
+        <select class="search-select">
+            <option>All</option>
+            <option>Amazon Devices</option>
+            <option>Books</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+        </select>
+
+        <input type="text" placeholder="Search Amazon.in" class="search-input">
+
+        <button class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+    <!-- Language -->
+    <div class="nav-language">
+        <span class="flag">🇮🇳</span>
+        <strong>EN</strong>
+        <span class="down-arrow">▾</span>
+    </div>
+
+    <!-- Account -->
+    <div class="nav-account nav-item">
+        <span>Hello, sign in</span>
+        <strong>Account & Lists</strong>
+    </div>
+
+    <!-- Orders -->
+    <div class="nav-orders nav-item">
+        <span>Returns</span>
+        <strong>& Orders</strong>
+    </div>
+
+    <!-- Cart -->
+    <div class="nav-cart nav-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <strong>Cart</strong>
+    </div>
+
+</header>
+<!-- SECONDARY NAVBAR -->
+<nav class="secondary-navbar">
+
+    <!-- All -->
+    <div class="secondary-item all-menu" id="all-menu-button">
+        <i class="fa-solid fa-bars"></i>
+        <strong>All</strong>
+    </div>
 
 
-        <div class="drop_down_box">
-            <select name="" id="">
-                <option value="">All</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <input type="text" name="" id="" placeholder="Search Amazon.in">
-            <div class="magnifying_box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
+    <!-- Rufus -->
+    <div class="rufus-item">
+        <span class="rufus-dot"></span>
+        <strong>Rufus</strong>
+    </div>
 
-        <div class="language_section">
-            <p>🇮🇳 <span id="EN">EN</span></p>
-        </div>
+    <!-- Links -->
+    <div class="secondary-item">
+        Fresh
+    </div>
 
-        <div>
-            <p>Hello, sign in</p>
-            <p>Account & Lists</p>
-        </div>
-        <div>
-            <p>Returns</p>
-            <p>& Orders</p>
-        </div>
-        <div>
-            <p>0</p>
-            <p>🛒 Cart</p>
-        </div>
+    <div class="secondary-item">
+        Prime Video
+    </div>
 
+    <div class="secondary-item">
+        Sell
+    </div>
 
-    </header>
-</body>
+    <div class="secondary-item">
+        Gift Cards
+    </div>
 
-</html>                       
+    <div class="secondary-item">
+        Amazon Pay
+    </div>
+
+    <div class="secondary-item">
+        Today's Deals
+    </div>
+
+    <div class="secondary-item">
+        Gift Ideas
+    </div>
+
+    <div class="secondary-item">
+        Buy Again
+    </div>
+
+    <div class="secondary-item">
+        AmazonBasics
+    </div>
+
+    <div class="secondary-item">
+        Health, Household & Personal Care
+    </div>
+
+    <div class="secondary-item">
+        Prime <span class="small-arrow">▼</span>
+    </div>
+
+    <div class="secondary-item">
+        Home Improvement
+    </div>
+
+</nav>

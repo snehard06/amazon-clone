@@ -1,0 +1,254 @@
+/* =========================================
+   DARK OVERLAY
+========================================= */
+
+.menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* =========================================
+   SIDE MENU
+========================================= */
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    left: -370px;
+
+    width: 368px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    z-index: 1001;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    transition: left 0.25s ease;
+
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   OPEN STATE
+========================================= */
+
+.side-menu.active {
+    left: 0;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.side-menu-header {
+    width: 100%;
+    height: 70px;
+
+    background: #232f3e;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 36px;
+
+    gap: 12px;
+
+    color: white;
+}
+
+
+/* User icon */
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #232f3e;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.side-menu-header strong {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close-menu {
+    position: fixed;
+
+    top: 10px;
+    left: 377px;
+
+    width: 44px;
+    height: 44px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 1002;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.2s ease;
+}
+
+
+.side-menu.active ~ .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================================
+   MENU SECTION
+========================================= */
+
+.menu-section {
+    width: 100%;
+
+    padding: 20px 0 15px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.menu-section h2 {
+    margin: 0 36px 12px;
+
+    font-size: 18px;
+
+    line-height: 22px;
+
+    font-weight: 700;
+
+    color: #111;
+}
+
+
+/* =========================================
+   MENU LINK
+========================================= */
+
+.menu-link {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 0 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #111;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    background: #eeeeee;
+}
+
+
+/* Right arrow */
+
+.menu-link i {
+    color: #7b858c;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SEE ALL
+========================================= */
+
+.menu-link.see-all {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.menu-link.see-all i {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.side-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.side-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+    background: #aaa;
+
+    border-radius: 4px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}

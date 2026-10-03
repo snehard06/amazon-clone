@@ -1,13 +1,37 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+
+    <title>Amazon Clone</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/side_menu.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 </head>
+
 <body>
+
     {% include "navbar.html" %}
+
+    {% include "side_menu.html" %}
+
+    <div class="page-space"></div>
+
+    {% include "footer.html" %}
+
+    <script src="{% static 'js/side_menu.js' %}"></script>
+
 </body>
+
 </html>
