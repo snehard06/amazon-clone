@@ -33,7 +33,15 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
-    ".vercel.app",
+    "amazon-clone-roan-nu.vercel.app",
+    "amazon-clone-git-main-sneha44.vercel.app",
+    "amazon-clone-duz5jof29-sneha44.vercel.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://amazon-clone-roan-nu.vercel.app",
+    "https://amazon-clone-git-main-sneha44.vercel.app",
+    "https://amazon-clone-duz5jof29-sneha44.vercel.app",
 ]
 
 
